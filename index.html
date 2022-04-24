@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Food Bites!</title>
+		<title>Finds your perfect Breweries!</title>
 		<link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+        
         <style>
+            li{
+                list-style: none;
+            }
+            img{width: 300px;}
             
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
             
         </style>
@@ -23,50 +29,46 @@
             <div class="hero-body">
                 <div class="container">
                     <figure class="image center">
-                        <img src="images/foodbites.png" style="max-width: 256px;">
+                        <img src="/images/find your brew.jpeg" style="max-width: 350px;">
                     </figure>
                 </div>
             </div>
+            <div class="form-inline my-2 my-lg-0">
+                <input id="location" class="form-control mr-sm-2" type="search" placeholder="Search by city" aria-label="Search">
+                <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
         </section>
         <!-- /.section -->
+        <div>
+            <h1 class="heading">FIND YOUR FAVORIT BREWERIES IN CALIFORNIA</h1>
+        </div>
 		<section class="section has has-background-light">
 			<div class="container">
 				<div class="columns">
 					<div class="column">
                     <div class="notification is-info">
-                        <h1 class="title is-size-4">FOOD</h1>
+                        <h1 class="title is-size-4">Drink</h1>
                         <p class="is-size-5">
-						Bulma is a modern CSS framework from @jgthms, based on Flexbox.
-						Using Bulma, we can describe our website's design using just classes. the food is delicious ᕕ( ᐛ )ᕗ
-                        </div>
+                            It’s strange how 8 glasses of water a day seems impossible but 8 beers is so damn easy.					</div>
+
 					</div>
 					<div class="column">
                     <div class="notification is-primary">
-                        <h1 class="title is-size-4">Drink</h1>
+                        <h1 class="title is-size-4">Food</h1>
                         <p class="is-size-5">
-						Flexbox is a CSS spec that makes sectioning and aligning more natural.
-						We don't need to know Flexbox but it's how Bulma works behind-the-scenes. ⦤(^ー^)⦥
-					</div>
-                    </div>
-					<div class="column">
-                    <div class="notification is-danger">
-                        <h1 class="title is-size-4">Music</h1>
-                        <p class="is-size-5">
-						Instead of writing our CSS per-element, we can use predefined classes.
-						With enough classes, we can describe our website design using semantics. ٩(^ᴗ^)۶
-					</div>
-                    </div>
-				</div>
+                            Let food be thy medicine and medicine be thy food.” “We all eat, and it would be a sad waste of opportunity to eat badly.” “You don't need a silver fork to eat good food.” “After a good dinner one can forgive anybody, even one's own relatives.                        </div>
+                  </div>
 			</div>
 		</section>
 		<!-- /.section -->
 
         <div class="col-12 col-md-8">
-            <h2 class="subtitle">Showing Breweries for: <span id="brew-search-term"></span></h2>
+            <h1 class="subtitle">Showing Breweries for: <span id="brew"></span></h1>
             <div id="brew-container" class="list-group"></div>
+            <table id="breweries"></table>
           </div>
-        <script defer src="api.js"></script>
-        <script defer src="food.js"></script>
+        <!--<script defer src="api.js"></script>-->
+       <script defer src="food.js"></script> 
    
 	</body>
 </html>

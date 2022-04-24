@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Food bitegit </title>
-</head>
-<body>
-<h1>Food Bites</h1> 
-<div class="nav"></div>   
-<script src="api.js"></script>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Finds your perfect Breweries!</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+        
+        <style>
+            li{
+                list-style: none;
+            }
+            img{width: 300px;}
+            
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+            
+        </style>
+	</head>
+	<body>
+        <section class="hero has-background-black">
+            <div class="hero-body">
+                <div class="container">
+                    <figure class="image center">
+                        <img src="/images/find your brew.jpeg" style="max-width: 350px;">
+                    </figure>
+                </div>
+            </div>
+            <div class="form-inline my-2 my-lg-0">
+                <input id="location" class="form-control mr-sm-2" type="search" placeholder="Search by city" aria-label="Search">
+                <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </section>
+        <!-- /.section -->
+        <div>
+            <h1 class="heading">FIND YOUR FAVORIT BREWERIES IN CALIFORNIA</h1>
+        </div>
+		<section class="section has has-background-light">
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+                    <div class="notification is-info">
+                        <h1 class="title is-size-4">Drink</h1>
+                        <p class="is-size-5">
+                            It’s strange how 8 glasses of water a day seems impossible but 8 beers is so damn easy.					</div>
+
+					</div>
+					<div class="column">
+                    <div class="notification is-primary">
+                        <h1 class="title is-size-4">Food</h1>
+                        <p class="is-size-5">
+                            Let food be thy medicine and medicine be thy food.” “We all eat, and it would be a sad waste of opportunity to eat badly.” “You don't need a silver fork to eat good food.” “After a good dinner one can forgive anybody, even one's own relatives.                        </div>
+                  </div>
+			</div>
+		</section>
+		<!-- /.section -->
+
+        <div class="col-12 col-md-8">
+            <h1 class="subtitle">Showing Breweries for: <span id="brew"></span></h1>
+            <div id="brew-container" class="list-group"></div>
+            <table id="breweries"></table>
+          </div>
+        <!--<script defer src="api.js"></script>-->
+       <script defer src="food.js"></script> 
+   
+	</body>
 </html>
